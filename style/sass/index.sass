@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap')
+
+$color__primary--gradient-scissors: linear-gradient( hsl(39, 89%, 49%), hsl(40, 84%, 53%) )
+$color__primary--gradient-paper: linear-gradient( hsl(230, 89%, 62%), hsl(230, 89%, 65%) )
+$color__primary--gradient-rock: linear-gradient( hsl(349, 71%, 52%), hsl(349, 70%, 56%) )
+$color__primary--gradient-lizard: linear-gradient( hsl(261, 73%, 60%), hsl(261, 72%, 63%) )
+$color__primary--cyan: linear-gradient( hsl(189, 59%, 53%), hsl(189, 58%, 57%) )
+
+$color__neutral--text-dark: hsl(229, 25%, 31%)
+$color__neutral--text-score: hsl(229, 64%, 46%)
+$color__neutral--header-outline: hsl(217, 16%, 45%)
+
+$color__background--gradient-radial: radial-gradient( at 50% 0%, hsl(214, 47%, 23%) , hsl(237, 49%, 15%) )
+$color__background: #16213D
+$text: 'Barlow Semi Condensed', sans-serif
+
+
+@mixin text( $weight: 600 )
+    font-family: $text
+    font-weight: $weight
+
+*::after, *, *::before
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html, body
+    height: 100%
+
+.container
+    background-image: $color__background--gradient-radial
+    height: 100%
+    padding: 60px 0 0 0
+
+.game
+    max-width: 640px
+    margin: auto
+    padding-bottom: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    &__button
+        @include text()
+        background-color: white
+        border: none
+        outline: none
+        border-radius: 8px
+        width: 100%
+        cursor: pointer
+
+        &--play-again
+            color: #dd405d
+            padding: .8rem 1.2rem
+
+        &-wrapper
+            width: 100%
+
+        &:active
+            transform: scale( 1.2 )
+
+    &__selection
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        &--mine
+        &--play-again
+
+    &__head
+        width: 100%
+        border: 1px solid $color__neutral--header-outline
+        border-radius: 10px
+        padding: 20px
+        z-index: 9
+        display: flex
+        justify-content: space-between
+        margin-bottom: 100px
+
+    &__text
+        &--head
+            display: flex
+            flex-direction: column
+            justify-content: center
+            width: 20%
+        &--score
+            @include text()
+            color: $color__neutral--text-score
+            font-size: 12px
+        &--number-score
+            @include text( 700 )
+            text-align: center
+            font-size: 32px
+            color: $color__neutral--header-outline
+        &--selection
+            @include text( 700 )
+            padding-bottom: 80px
+            color: white
+            font-size: 26px
+            z-index: 1
+        &--play-again
+            padding-bottom: 8px
+            font-size: 36px
+    
+    &__score
+        background-color: white
+        padding: 10px 20px
+        border-radius: 8px
+
+    &__body
+        position: relative
+
+        &--selection
+            display: flex
+            column-gap: 80px
+    
+    &__img
+
+        width: 100%
+        
+        &::selection
+            background-color: transparent
+
+        &--paper
+            top: -20px
+            left: -20px
+            background-image: $color__primary--gradient-paper
+    
+        &--scissors
+            top: -20px
+            right: -20px
+            background-image: $color__primary--gradient-scissors
+
+        &--rock
+            bottom: -20px
+            left: calc( 50% - 47px )
+            background-image: $color__primary--gradient-rock
+
+        &-container
+            background-color: white
+            width: 70px
+            height: 70px
+            padding: 20px
+            border-radius: 100%
+
+            // &--selection
+                // background-color: $color__background
+        
+        &--items
+            position: absolute
+            width: 90px
+            height: 90px
+            border-radius: 100%
+            cursor: pointer
+            display: flex
+            justify-content: center
+            align-items: center
+
+            &:active
+                transform: scale( 1.2 )
+
+            &-selection
+                position: relative
+                transform: scale( 1.8 )
+                top: auto
+                left: auto
+                bottom: auto
+                right: auto
+
+                &:active
+                    transform: scale( none )
+
+                // &-win::before
+                //     position: absolute
+                //     content: ''
+                //     width: 300px
+                //     height: 300px
+                //     background-image: radial-gradient(#2B3956 28%, #26355473 32% 47%, #233455 57% 100%)
+                //     border-radius: 100%
+                //     z-index: -1
+
+
+.rules
+    margin: auto
+    max-width: 960px
+    display: flex
+    justify-content: end
+
+    &__button
+        &--rules
+            background-color: transparent
+            color: white
+            @include text( 400 )
+            padding: .3rem 1.3rem
+            outline: none
+            border-radius: 6px
+            border: 1px solid $color__neutral--header-outline
+            cursor: pointer
+
+            &:active
+                transform: scale( 1.2 )
+
+        
+
+
+        

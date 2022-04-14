@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="game">
+
+      <div class="game__head">
+        <div class="game__text--head">
+          <img src="images/logo.svg" alt="">
+        </div>
+        <div class="game__score">
+          <div class="game__text--score">
+            <span>SCORE</span>
+          </div>
+          <div class="game__text--number-score">
+            12
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="rules">
+
+      <div class="rules__button">
+        <button class="rules__button--rules" > RULES </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <template class="game_body--template" >
+
+    <div class="game__body">
+
+      <div class="game__img--triangle">
+          <img class="game__img" src="images/bg-triangle.svg" alt="">
+      </div>
+
+      <div class="game__img--items game__img--paper" data-type="paper">
+        <div class="game__img-container">
+          <img class="game__img" src="images/icon-paper.svg" alt="">
+        </div>
+      </div>
+
+      <div class="game__img--items game__img--scissors" data-type="scissors">
+        <div class="game__img-container">
+          <img class="game__img" src="images/icon-scissors.svg" alt="">
+        </div>
+      </div>
+
+      <div class="game__img--items game__img--rock" data-type="rock">
+        <div class="game__img-container">
+          <img class="game__img" src="images/icon-rock.svg" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </template>
+
+  <template class="game__selection--template">
+    <div class="game__body game__body--selection">
+      
+      <div class="game__selection game__selection--mine">
+        <div class="game__text--selection">
+          <span>YOU PICKED</span>
+        </div>
+        <div class="game__img--items game__img--items-selection game__img--items-selection--mine game__img--items-selection-win">
+          <div class="game__img-container">
+            <img class="game__img game__img--selection game__img--selection--mine" src="images/icon-paper.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="game__selection game__selection--play-again">
+
+        <div class="game__text--selection  game__text--play-again">
+            <span>YOU LOSE</span>
+        </div>
+
+        <div class="game__button-wrapper">
+          <button class="game__button game__button--play-again">
+              PLAY AGAIN
+          </button>
+      </div>
+
+      </div>
+
+      <div class="game__selection game__selection--mine">
+        <div class="game__text--selection">
+          <span>THE HOUSE PICKED</span>
+        </div>
+        <div class="game__img--items game__img--items-selection game__img--items-selection--other game__img--paper-selection">
+          <div class="game__img-container game__img-container--selection">
+            <img class="game__img game__img--selection game__img--selection--other" src="images/icon-paper.svg" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+*::after, *, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  background-image: radial-gradient(at 50% 0%, #1f3756, #141539);
+  height: 100%;
+  padding: 60px 0 0 0;
+}
+
+.game {
+  max-width: 640px;
+  margin: auto;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.game__button {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+.game__button--play-again {
+  color: #dd405d;
+  padding: 0.8rem 1.2rem;
+}
+.game__button-wrapper {
+  width: 100%;
+}
+.game__button:active {
+  transform: scale(1.2);
+}
+.game__selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.game__head {
+  width: 100%;
+  border: 1px solid #606e85;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.game__text--head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+}
+.game__text--score {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  color: #2a46c0;
+  font-size: 12px;
+}
+.game__text--number-score {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 32px;
+  color: #606e85;
+}
+.game__text--selection {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  padding-bottom: 80px;
+  color: white;
+  font-size: 26px;
+  z-index: 1;
+}
+.game__text--play-again {
+  padding-bottom: 8px;
+  font-size: 36px;
+}
+.game__score {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+.game__body {
+  position: relative;
+}
+.game__body--selection {
+  display: flex;
+  column-gap: 80px;
+}
+.game__img {
+  width: 100%;
+}
+.game__img::selection {
+  background-color: transparent;
+}
+.game__img--paper {
+  top: -20px;
+  left: -20px;
+  background-image: linear-gradient(#4865f4, #5671f5);
+}
+.game__img--scissors {
+  top: -20px;
+  right: -20px;
+  background-image: linear-gradient(#ec9e0e, #eca922);
+}
+.game__img--rock {
+  bottom: -20px;
+  left: calc(50% - 47px);
+  background-image: linear-gradient(#dc2e4e, #dd405d);
+}
+.game__img-container {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  border-radius: 100%;
+}
+.game__img--items {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game__img--items:active {
+  transform: scale(1.2);
+}
+.game__img--items-selection {
+  position: relative;
+  transform: scale(1.8);
+  top: auto;
+  left: auto;
+  bottom: auto;
+  right: auto;
+}
+.game__img--items-selection:active {
+  transform: scale(none);
+}
+
+.rules {
+  margin: auto;
+  max-width: 960px;
+  display: flex;
+  justify-content: end;
+}
+.rules__button--rules {
+  background-color: transparent;
+  color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 400;
+  padding: 0.3rem 1.3rem;
+  outline: none;
+  border-radius: 6px;
+  border: 1px solid #606e85;
+  cursor: pointer;
+}
+.rules__button--rules:active {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=style.css.map */
