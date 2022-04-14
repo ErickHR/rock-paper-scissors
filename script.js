@@ -17,14 +17,14 @@ const resultDecided = () => {
     let selecteMine = items.findIndex( item => gameImgItemsMySelection == item )
     let selecteOthers = items.findIndex( item => selectionOther == item )
 
-    if( selecteMine == 2 && selecteOthers == 0  )
+    if( 
+        ( selecteMine == 0 && selecteOthers == 1 ) &&
+        ( selecteMine == 1 && selecteOthers == 2 ) &&
+        ( selecteMine == 2 && selecteOthers == 0 )
+    )
         return 'YOU LOSE'
 
-    if( selecteMine > selecteOthers )
     return 'YOU WIN'
-
-    return 'YOU LOSE'
-
 }
 
 const result = () => {
